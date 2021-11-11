@@ -14,11 +14,11 @@ class BaseModel:
         """dictionary representation of an instance (method to_dict())."""
 
         if "errormessage" not in kwargs:
+            strft = "%Y-%m-%dT%H:%M:%S.%f"
             for key, value in kwargs.items():
                 if key != "__class__":
                     if key in ["created_at", "updated_at"]:
-                        self.__dict__[key] = datetime.strptime(
-                                value, "%Y-%m-%dT%H:%M:%S.%f")
+                        self.__dict__[key] = datetime.strptime(value, strft)
                     else:
                         self.__dict__[key] = value
 

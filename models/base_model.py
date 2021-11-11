@@ -15,10 +15,11 @@ class BaseModel:
 
         if "errormessage" not in kwargs:
             for key, value in kwargs.items():
-                if key in ["created_at","updated_at"]:
-                    self.__dict__[key] = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
-                else:
-                    self.__dict__[key] = value
+                if key != "__class__":
+                    if key in ["created_at","updated_at"]:
+                        self.__dict__[key] = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+                    else:
+                        self.__dict__[key] = value
 
     def save(self):
         """Update the current datetime"""

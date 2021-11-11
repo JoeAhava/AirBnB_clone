@@ -16,8 +16,9 @@ class BaseModel:
         if "errormessage" not in kwargs:
             for key, value in kwargs.items():
                 if key != "__class__":
-                    if key in ["created_at","updated_at"]:
-                        self.__dict__[key] = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+                    if key in ["created_at", "updated_at"]:
+                        self.__dict__[key] = datetime.strptime(
+                                value, "%Y-%m-%dT%H:%M:%S.%f")
                     else:
                         self.__dict__[key] = value
 
@@ -35,4 +36,5 @@ class BaseModel:
         return kvdict
 
     def __str__(self):
+        """Returns information about the class in human readable format"""
         return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"

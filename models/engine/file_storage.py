@@ -37,5 +37,5 @@ class FileStorage:
                     cls = key["__class__"]
                     del key["__class__"]
                     self.new(eval(cls)(**key))
-        except e:
+        except Exception:
             pass

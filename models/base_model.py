@@ -1,4 +1,5 @@
 #!/usr/bin/Python3
+import models
 import uuid
 from datetime import datetime
 """BaseModel that defines all common attributes/methods for other classes:"""
@@ -13,7 +14,7 @@ class BaseModel:
         self.updated_at = datetime.now()
         """dictionary representation of an instance (method to_dict())."""
 
-        if "errormessage" not in kwargs:
+        if len(kwargs) != 0:
             strft = "%Y-%m-%dT%H:%M:%S.%f"
             for key, value in kwargs.items():
                 if key != "__class__":
@@ -21,10 +22,13 @@ class BaseModel:
                         self.__dict__[key] = datetime.strptime(value, strft)
                     else:
                         self.__dict__[key] = value
+        else:
+            models.storage.new(self)
 
     def save(self):
         """Update the current datetime"""
         self.updated_at = datetime.today()
+        models.storage.save()
 
     def to_dict(self):
         """Returns the dict format of an object"""

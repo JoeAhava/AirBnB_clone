@@ -32,7 +32,7 @@ class FileStorage:
         """
         try:
             with open(self.__file_path, 'r') as file_:
-                jd = json.load(f)
+                jd = json.load(file_)
                 for key in jd.values():
                     cls = key["__class__"]
                     del key["__class__"]

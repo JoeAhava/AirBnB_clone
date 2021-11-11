@@ -30,11 +30,11 @@ class BaseModel:
         """Returns the dict format of an object"""
         kvdict = self.__dict__
         strtf = "%Y-%m-%dT%H:%M:%S.%f"
-        kvdict["__class__"] = self.__class__.__name__
+        kvdict["__class__"] = type(self).__name__
         kvdict["updated_at"] = self.updated_at.strftime(strtf)
         kvdict["created_at"] = self.created_at.strftime(strtf)
         return kvdict
 
     def __str__(self):
         """Returns information about the class in human readable format"""
-        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
+        return f"[{type(self).__name__}] ({self.id}) {self.__dict__}"

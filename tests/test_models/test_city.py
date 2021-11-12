@@ -13,7 +13,7 @@ class TestCity(unittest.TestCase):
         is_attr = False
         for attri in attr_list:
             is_attr = hasattr(City, attri)
-            if not is_attri:
+            if not is_attr:
                 break
         self.assertEqual(is_attr, True)
 
@@ -26,3 +26,6 @@ class TestCity(unittest.TestCase):
         """Test the type of name attribute"""
         type_ = type(City.name).__name__
         self.assertEqual(type_, "str")
+
+if __name__ == "__main__":
+    unittest.main()

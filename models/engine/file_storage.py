@@ -1,4 +1,5 @@
 #!usr/bin/python3
+from models.base_model import BaseModel
 import models
 import json
 """class FileStorage that serializes instances to a

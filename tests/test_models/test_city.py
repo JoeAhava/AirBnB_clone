@@ -13,6 +13,8 @@ class TestCity(unittest.TestCase):
         is_attr = False
         for attri in attr_list:
             is_attr = hasattr(City, attri)
+            if not is_attri:
+                break
         self.assertEqual(is_attr, True)
 
     def test_type_state_id(self):

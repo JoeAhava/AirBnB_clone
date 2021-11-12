@@ -32,3 +32,6 @@ class Test_review(unittest.TestCase):
         self.assertEqual(splace_id, 'str')
         self.assertEqual(suser_id, 'str')
         self.assertEqual(stext, 'str')
+
+if __name__ == "__main__":
+    unittest.main()

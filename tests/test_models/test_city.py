@@ -4,6 +4,7 @@ import unittest
 from models.city import City
 """Test case for class City"""
 
+
 class TestCity(unittest.TestCase):
     """Simple test model for class City"""
 
@@ -26,6 +27,7 @@ class TestCity(unittest.TestCase):
         """Test the type of name attribute"""
         type_ = type(City.name).__name__
         self.assertEqual(type_, "str")
+
 
 if __name__ == "__main__":
     unittest.main()

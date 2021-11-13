@@ -23,12 +23,13 @@ class Test_place(unittest.TestCase):
             attr = hasattr(Place, key)
             if not attr:
                 break
-        self.assertEqual(attr, True);
+        self.assertEqual(attr, True)
+
     def test_type_str(self):
         """Test type of class attribute"""
-        
+
         scity_id = type(Place.city_id).__name__
-        suser_id = type(Place.user_id ).__name__
+        suser_id = type(Place.user_id).__name__
         sname = type(Place.name).__name__
         sdescription = type(Place.description).__name__
         inumber_rooms = type(Place.number_rooms).__name__

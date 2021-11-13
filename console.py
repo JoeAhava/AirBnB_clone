@@ -2,6 +2,8 @@
 from models.base_model import BaseModel
 from models import storage
 import cmd
+
+
 class HBNBCommand(cmd.Cmd):
     intro = 'Welcome to the AirBnb Clone Console\n'
     prompt = '(hbnb) '
@@ -24,7 +26,7 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(arg):
         pass
 
-    def do_EOF(self, arg): 
+    def do_EOF(self, arg):
         '''Quit command to exit the program
         '''
         print("")
@@ -34,16 +36,17 @@ class HBNBCommand(cmd.Cmd):
         '''Quit command to exit the program
         '''
         return True
-    
+
     def validate_class(self, arg):
         if len(arg) is 0:
             print("** class name missing **")
             return False
-        elif not arg == type(BaseModel()).__name__:
+        elif not arg == str(type(BaseModel()).__name__):
             print("** class doesn't exist **")
             return False
         else:
             return True
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()

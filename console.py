@@ -55,7 +55,7 @@ class HBNBCommand(cmd.Cmd):
         pass
 
     def default(self, arg):
-        """Default behavior for cmd module when input is invalid
+        """Default action when input is invalid
         """
         argdict = {
             "all": self.do_all,

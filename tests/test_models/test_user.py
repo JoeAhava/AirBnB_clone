@@ -14,10 +14,9 @@ class TestUser(unittest.TestCase):
         Tests for public class attrubute
         """
         attr_list = ['email',
-                    'first_name',
-                    'last_name',
-                    'password'
-                    ]
+                     'first_name',
+                     'last_name',
+                     'password']
         is_attr = False
         for attri in attr_list:
             is_attr = hasattr(User, attri)

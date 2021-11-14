@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+"""Test class Review"""
+
 import models
 import unittest
 from models.review import Review
-"""Test class Review"""
 
 
 class Test_review(unittest.TestCase):

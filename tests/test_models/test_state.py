@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+"""Test class State"""
+
 import models
 import unittest
 from models.state import State
-"""Test class State"""
 
 
 class TestState(unittest.TestCase):

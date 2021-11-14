@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" Test for amenity class """
+
 import models
 import unittest
 from models.amenity import Amenity

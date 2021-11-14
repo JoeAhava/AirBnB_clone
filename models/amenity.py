@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-from models.base_model import BaseModel
 """Amenity class that inherit form Basemodel"""
+
+from models.base_model import BaseModel
 
 
 class Amenity(BaseModel):

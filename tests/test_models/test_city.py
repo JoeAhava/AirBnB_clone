@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+"""Test case for class City"""
+
 import models
 import unittest
 from models.city import City
-"""Test case for class City"""
 
 
 class TestCity(unittest.TestCase):

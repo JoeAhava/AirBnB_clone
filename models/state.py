@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-from models.base_model import BaseModel
 """State class that inherit from BaseModel super class"""
+
+from models.base_model import BaseModel
 
 
 class State(BaseModel):

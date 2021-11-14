@@ -164,7 +164,7 @@ class HBNBCommand(cmd.Cmd):
     def do_update(self, arg):
         """Usage: update <class_name> <object_id> <attribute_name>
         <attribute_value> or <class_name>.update(<object_id>, <attribute_name>
-        , <attribute_value>) or <class_name>.update(<id>, <dictionary>)
+        , <attribute_value>) or <class_name>.update(<object_id>, <dictionary>)
         Update a class instance of a given id by adding or updating
         a given attribute key/value pair or dictionary."""
         argl = parse(arg)

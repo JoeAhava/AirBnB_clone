@@ -35,7 +35,7 @@ class HBNBCommand(cmd.Cmd):
     """ Command interpreter class that does the action.
 
     Attributes:
-        prompt (str): The command prompt.
+        prompt (str): command prompt.
     """
 
     prompt = "(hbnb) "

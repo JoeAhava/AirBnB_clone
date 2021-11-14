@@ -134,7 +134,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, arg):
         """Usage: all or all <class_name> or <class_name>.all()
-        Display string representations of all instances of a given class.
+        Display string representations of all objects of given class.
         If no class is specified, displays all instantiated objects."""
         argl = parse(arg)
         if len(argl) > 0 and argl[0] not in HBNBCommand.__classes:

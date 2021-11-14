@@ -152,7 +152,7 @@ class HBNBCommand(cmd.Cmd):
             print(objl)
 
     def do_count(self, arg):
-        """Usage: count <class_name> or <class>.count()
+        """Usage: count <class_name> or <class_name>.count()
         Retrieve the number of instances of a given class."""
         argl = parse(arg)
         count = 0

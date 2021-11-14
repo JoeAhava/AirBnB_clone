@@ -9,7 +9,7 @@ import cmd
 class HBNBCommand(cmd.Cmd):
     ''' Entry point of console program and commands center '''
 
-    intro = 'Welcome to the AirBnb Clone Console\n'
+    intro = ''
     prompt = '(hbnb) '
 
     def do_create(self, arg):
@@ -51,7 +51,7 @@ class HBNBCommand(cmd.Cmd):
     def validate_class(self, arg):
         """ validates the given class name """
 
-        if len(arg) is 0:
+        if len(arg) == 0:
             print("** class name missing **")
             return False
         elif not arg == str(type(BaseModel()).__name__):

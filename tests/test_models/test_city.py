@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Test case for class City"""
+"""Test case for class City
 
 import models
 import unittest
@@ -32,3 +32,4 @@ class TestCity(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+"""

@@ -1,7 +1,7 @@
 #!usr/bin/python3
-from models.base_model import BaseModel
 import models
 import json
+from models.base_model import BaseModel
 from models.state import State
 from models.city import City
 from models.place import Place

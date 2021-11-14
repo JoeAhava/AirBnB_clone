@@ -13,7 +13,8 @@ interface, like in a Shell(perfect for development and debugging)
     static and dynamic
 - A database or files that
 can store data(data=objects)
-- An API that provides a communication interface between the front-end
+- An API that provides a communication
+interface between the front-end
 and your data(retrieve, create, delete, update them)
 ## Files and Directories
 - repr(models) directory will contain all classes used for the entire

@@ -33,7 +33,6 @@ class BaseModel:
     def to_dict(self):
         """Returns the dict format of an object"""
         kvdict = self.__dict__.copy()
-        # strtf = "%Y-%m-%dT%H:%M:%S.%f"
         kvdict["__class__"] = type(self).__name__
         kvdict["updated_at"] = self.updated_at.isoformat()
         kvdict["created_at"] = self.created_at.isoformat()

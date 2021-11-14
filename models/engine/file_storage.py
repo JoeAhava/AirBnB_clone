@@ -1,5 +1,4 @@
 #!usr/bin/python3
-import models
 import json
 from models.base_model import BaseModel
 from models.state import State

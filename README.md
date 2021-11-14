@@ -20,7 +20,8 @@ project. A class, called “model” in a OOP project is the representation
 of an object/instance and is used during object manipulation.
 - repr(tests) directory will contain all
 unit tests of all code coverage.
-- repr(console.py) file is the entry point of our command interpreter.
+- repr(console.py) file is the entry
+point of our command interpreter.
 - repr(models/base_model.py) file is the base class of all our models.
 It contains common elements:
     - attributes: repr(id, created_at) and repr(updated_at)

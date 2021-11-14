@@ -1,6 +1,7 @@
 #!/usr/bin/Python3
 import uuid
 from datetime import datetime
+import models
 """BaseModel that defines all common attributes/methods for other classes:"""
 
 

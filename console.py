@@ -50,7 +50,8 @@ class HBNBCommand(cmd.Cmd):
     }
 
     def emptyline(self):
-        """ Do nothing upon receiving an empty line."""
+        """ Do nothing upon receiving an empty line.
+        """
         pass
 
     def default(self, arg):

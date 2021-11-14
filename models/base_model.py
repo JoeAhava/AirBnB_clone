@@ -40,4 +40,4 @@ class BaseModel:
 
     def __str__(self):
         """Returns information about the class in human readable format"""
-        return f"[{type(self).__name__}] ({self.id}) {self.__dict__}"
+        return f"[{type(self).__name__}] ({self.id}) {self.__dict__.copy()}"

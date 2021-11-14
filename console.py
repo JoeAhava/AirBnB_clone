@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines the HBnB console."""
+"""Command Interpreter"""
 import re
 from shlex import split
 from models import storage
@@ -13,9 +13,9 @@ from models.review import Review
 
 
 def parse(arg):
-    curly_braces = re.search(r"\{(.*?)\}", arg)
+    braces = re.search(r"\{(.*?)\}", arg)
     brackets = re.search(r"\[(.*?)\]", arg)
-    if curly_braces is None:
+    if braces is None:
         if brackets is None:
             return [i.strip(",") for i in split(arg)]
         else:
@@ -24,14 +24,14 @@ def parse(arg):
             retl.append(brackets.group())
             return retl
     else:
-        lexer = split(arg[:curly_braces.span()[0]])
+        lexer = split(arg[:braces.span()[0]])
         retl = [i.strip(",") for i in lexer]
-        retl.append(curly_braces.group())
+        retl.append(braces.group())
         return retl
 
 
 class HBNBCommand(cmd.Cmd):
-    """Defines the HolbertonBnB command interpreter.
+    """Command interpreter class.
 
     Attributes:
         prompt (str): The command prompt.

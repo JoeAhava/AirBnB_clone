@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+"""Test class Place"""
+
 import models
 import unittest
 from models.place import Place
-"""Test class Place"""
 
 
 class Test_place(unittest.TestCase):

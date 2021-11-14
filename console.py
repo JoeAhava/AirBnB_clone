@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Command Interpreter"""
+""" Command Interpreter"""
 import cmd
 import re
 from shlex import split
